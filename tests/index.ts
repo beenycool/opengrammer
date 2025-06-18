@@ -1,1 +1,0 @@
-// TypeScript test entry point

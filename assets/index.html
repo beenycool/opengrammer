@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenGrammer - System-wide Grammar Checking</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+        .status {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .status h3 {
+            margin-top: 0;
+        }
+        .feature-list {
+            text-align: left;
+            margin: 20px 0;
+        }
+        .feature-list li {
+            margin: 10px 0;
+            padding-left: 10px;
+        }
+        .demo-area {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .demo-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .demo-textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔤 OpenGrammer</h1>
+        <p class="subtitle">System-wide Grammar and Spell Checking</p>
+        
+        <div class="status">
+            <h3>✅ Service Status</h3>
+            <p>Overlay service is running and monitoring system-wide text inputs.</p>
+            <p><strong>Platform:</strong> <span id="platform">Detecting...</span></p>
+            <p><strong>Active Overlays:</strong> <span id="overlay-count">0</span></p>
+        </div>
+
+        <div class="demo-area">
+            <h3>🧪 Test Area</h3>
+            <p>Type in these fields to test the overlay suggestions:</p>
+            
+            <input type="text" class="demo-input" placeholder="Type here to test speling errors..." />
+            
+            <textarea class="demo-textarea" placeholder="Type a longer text here. This is a grate way to test the grammar checking system. You can includ multiple sentenses with various erors."></textarea>
+        </div>
+
+        <div class="status">
+            <h3>🚀 Features</h3>
+            <ul class="feature-list">
+                <li><strong>System-wide Detection:</strong> Works across all applications</li>
+                <li><strong>Real-time Suggestions:</strong> Instant grammar and spelling corrections</li>
+                <li><strong>Cross-platform:</strong> Windows, macOS, and Linux support</li>
+                <li><strong>Native OS Integration:</strong> Uses accessibility APIs for text field detection</li>
+                <li><strong>Non-intrusive:</strong> Lightweight overlays that don't interfere with workflow</li>
+                <li><strong>Privacy-focused:</strong> All processing done locally</li>
+            </ul>
+        </div>
+
+        <div class="demo-area">
+            <h3>⚙️ Configuration</h3>
+            <p>The overlay service is configured with the following settings:</p>
+            <ul class="feature-list">
+                <li>Keyboard Hook: Enabled</li>
+                <li>Mouse Hook: Enabled</li>
+                <li>Accessibility Hook: Enabled</li>
+                <li>Polling Interval: 100ms</li>
+                <li>Maximum Overlays: 5</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Update platform information
+        const platform = process.platform;
+        document.getElementById('platform').textContent = platform;
+
+        // Simulate overlay count updates (in a real app, this would come from the main process)
+        let overlayCount = 0;
+        setInterval(() => {
+            // Simulate changing overlay count
+            overlayCount = Math.floor(Math.random() * 3);
+            document.getElementById('overlay-count').textContent = overlayCount.toString();
+        }, 2000);
+
+        // Add some interactivity to demo inputs
+        const inputs = document.querySelectorAll('.demo-input, .demo-textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                console.log('Demo input focused - overlay service would detect this');
+            });
+            
+            input.addEventListener('input', () => {
+                console.log('Demo input changed - overlay service would process this');
+            });
+        });
+    </script>
+</body>
+</html>

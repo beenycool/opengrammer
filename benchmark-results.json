@@ -1,0 +1,170 @@
+{
+  "timestamp": "2025-06-15T15:22:18.171Z",
+  "thresholds": {
+    "posTagger": 6,
+    "entityRecognizer": 4,
+    "parseDependencies": 10
+  },
+  "results": [
+    {
+      "function": "grammarEngine.posTagger",
+      "averageTime": 1.8721979999999667,
+      "minTime": 1.243800000000192,
+      "maxTime": 5.0304000000001,
+      "iterations": 100,
+      "threshold": 6,
+      "passed": true
+    },
+    {
+      "function": "nlpProcessor.posTagger",
+      "averageTime": 1.6628260000000181,
+      "minTime": 1.0480999999999767,
+      "maxTime": 4.363000000000284,
+      "iterations": 100,
+      "threshold": 6,
+      "passed": true
+    },
+    {
+      "function": "grammarEngine.entityRecognizer",
+      "averageTime": 2.852644,
+      "minTime": 1.39679999999953,
+      "maxTime": 9.618400000000292,
+      "iterations": 100,
+      "threshold": 4,
+      "passed": true
+    },
+    {
+      "function": "nlpProcessor.entityRecognizer",
+      "averageTime": 3.1729479999999968,
+      "minTime": 1.518000000000029,
+      "maxTime": 28.765800000000127,
+      "iterations": 100,
+      "threshold": 4,
+      "passed": true
+    },
+    {
+      "function": "grammarEngine.parseDependencies",
+      "averageTime": 5.320843000000022,
+      "minTime": 2.5423000000000684,
+      "maxTime": 10.504300000000512,
+      "iterations": 100,
+      "threshold": 10,
+      "passed": true
+    },
+    {
+      "function": "nlpProcessor.parseDependencies",
+      "averageTime": 1.8050509999999849,
+      "minTime": 1.0761999999995169,
+      "maxTime": 8.83770000000004,
+      "iterations": 100,
+      "threshold": 10,
+      "passed": true
+    },
+    {
+      "function": "entityRecognizer complexity",
+      "averageTime": 3,
+      "minTime": 3,
+      "maxTime": 3,
+      "iterations": 1,
+      "threshold": 8,
+      "passed": true
+    },
+    {
+      "function": "extractAllEntities length",
+      "averageTime": 15,
+      "minTime": 15,
+      "maxTime": 15,
+      "iterations": 1,
+      "threshold": 20,
+      "passed": true
+    },
+    {
+      "function": "extractNLPEntities length",
+      "averageTime": 15,
+      "minTime": 15,
+      "maxTime": 15,
+      "iterations": 1,
+      "threshold": 20,
+      "passed": true
+    },
+    {
+      "function": "buildEntityResult length",
+      "averageTime": 15,
+      "minTime": 15,
+      "maxTime": 15,
+      "iterations": 1,
+      "threshold": 20,
+      "passed": true
+    },
+    {
+      "function": "findMatchingTokensOptimized length",
+      "averageTime": 15,
+      "minTime": 15,
+      "maxTime": 15,
+      "iterations": 1,
+      "threshold": 20,
+      "passed": true
+    },
+    {
+      "function": "NER Consistency (Low Variance)",
+      "averageTime": 2.1985759999999392,
+      "minTime": 1.4272999999993772,
+      "maxTime": 4.942000000000007,
+      "iterations": 50,
+      "threshold": 4,
+      "passed": true
+    },
+    {
+      "function": "NER Mixed Case Sensitivity",
+      "averageTime": 2.3515000000006694,
+      "minTime": 2.3515000000006694,
+      "maxTime": 2.3515000000006694,
+      "iterations": 1,
+      "threshold": 5,
+      "passed": true
+    },
+    {
+      "function": "NER Base Performance",
+      "averageTime": 3.7755499999999484,
+      "minTime": 1.9074999999993452,
+      "maxTime": 7.399899999999434,
+      "iterations": 50,
+      "threshold": 6,
+      "passed": true
+    },
+    {
+      "function": "NER Optimization Target",
+      "averageTime": 3.3502800000000024,
+      "minTime": 1.9516999999996187,
+      "maxTime": 6.8215000000000146,
+      "iterations": 50,
+      "threshold": 4,
+      "passed": true
+    },
+    {
+      "function": "NER Large Input Handling",
+      "averageTime": 11.370310000000064,
+      "minTime": 6.926100000000588,
+      "maxTime": 16.90229999999974,
+      "iterations": 10,
+      "threshold": 20,
+      "passed": true
+    },
+    {
+      "function": "NER Custom Entities",
+      "averageTime": 4.5325720000000365,
+      "minTime": 3.1346000000003187,
+      "maxTime": 11.15310000000045,
+      "iterations": 25,
+      "threshold": 5,
+      "passed": true
+    }
+  ],
+  "summary": {
+    "totalBenchmarks": 17,
+    "passed": 17,
+    "failed": 0,
+    "overallPassed": true,
+    "totalTime": 3052.4741000000004
+  }
+}
